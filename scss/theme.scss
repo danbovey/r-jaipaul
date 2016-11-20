@@ -1,0 +1,21 @@
+@import "structura";
+
+body {
+    background-image: url(%%body-bg%%);
+    background-repeat: repeat;
+}
+
+body > .content {
+    width: calc(100% - 381px);
+    margin: 40px 0 0 30px;
+    padding: 0 10px !important;
+    overflow: auto;
+    background: #FFF;
+}
+
+@import "header";
+@import "sidebar";
+@import "footer";
+@import "nightmode";
+
+@import "flairs";

@@ -1,0 +1,26 @@
+.side {
+    margin: 40px 30px 0 0;
+    padding: 12px;
+    width: 321px;
+    
+    &:after {
+        display: block;
+        height: 273px;
+        background: url(%%malfoy%%) center/cover;
+        content: '';
+    }
+
+    .titlebox {
+        .subscribers .word, .users-online .word {
+            font-size: 0;
+        }
+        .subscribers .word:before {
+            font-size: 12px;
+            content: 'citizens of Rayners Lane';
+        }
+        .users-online .word:before {
+            font-size: 12px;
+            content: "vibin' right now";
+        }
+    }
+}

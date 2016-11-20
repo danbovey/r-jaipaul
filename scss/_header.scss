@@ -1,0 +1,217 @@
+#header {
+    height: 110px;
+    margin: 60px 30px 0;
+    border: none;
+    box-shadow: inset 0 -35px 0 0 rgba(21, 27, 33, 0.6);
+    background-image: linear-gradient(rgba(58, 79, 113, 0.6), rgba(25, 31, 41, 0.6)), url(%%header%%);
+    background-size: cover;
+    background-position: center 45%;
+
+    #header-bottom-left {
+        font-size: 0;
+        text-align: center;
+
+        .pagename a, .tabmenu {
+            bottom: 22px;
+            font-size: 13px;
+        }
+        
+        .pagename {
+            position: absolute;
+            top: 19px;
+            left: 80px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #FFF;
+
+            a {
+                position: relative;
+                top: 4px;
+                font-size: 24px;
+                font-weight: bold;
+                text-decoration: none;
+                color: inherit;
+
+                &:after {
+                    display: inline-block;
+                    position: relative;
+                    top: -4px;
+                    left: 7px;
+                    padding-right: 7px;
+                    font-size: 12px;
+                    font-weight: normal;
+                    letter-spacing: 6px;
+                    content: 'the subreddit';
+                }
+            }
+        }
+
+        .tabmenu {
+            a {
+                position: relative;
+                top: 12px;
+                border: none;
+                background: none;
+                font-weight: normal;
+                color: #FFF;
+            }
+
+            li.selected {
+                border: none;
+
+                a {
+                    border-bottom: 2px solid #FFF;
+                    font-weight: inherit;
+                }
+            }
+        }
+    }
+
+    #header-bottom-right {
+        top: auto;
+        right: 7px;
+        bottom: 7px;
+        padding-right: 6px;
+        background: none;
+        font-size: 14px;
+
+        a {
+            color: #FFF;
+        }
+
+        #userbarToggle {
+            border: none;
+            background: none;
+
+            &.userbarShow {
+                top: auto;
+            }
+        }
+
+        .user {
+            position: static;
+            margin-right: -10px;
+            font-size: 0;
+
+            a {
+                font-size: 11px;
+            }
+        }
+        .userkarma {
+            display: none;
+        }
+
+        #mail {
+            left: 4px;
+        }
+        #mail.havemail {
+            top: -3px !important;
+            height: 20px;
+            border-radius: 0;
+            background-color: transparent;
+
+            &:after {
+                display: block;
+                position: absolute;
+                top: 4px;
+                right: 1px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #E286A9;
+                content: '';
+            }
+        }
+
+        #openRESPrefs + .separator, .user + .separator, .logout {
+            display: none;
+        }
+    }
+
+    #RESAccountSwitcherIcon {
+        margin-right: 0;
+    }
+}
+
+.hot-page #header {
+    height: 360px;
+    background-position: center 66%;
+
+    #header-bottom-left .pagename {
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        a {
+            top: 0;
+
+            &:before {
+                position: absolute;
+                top: 45px;
+                left: 50%;
+                margin-left: -40px;
+                width: 80px;
+                height: 1px;
+                background: #FFF;
+                content: '';
+            }
+            &:after {
+                position: static;
+                display: block;
+                margin-top: 40px;
+                padding: 0;
+            }
+        }
+    }
+    a#header-img {
+        overflow: initial;
+    }
+    a#header-img-a:after {
+        content: "REDDIT.COM";
+    }
+}
+
+#sr-header-area {
+    position: absolute;
+    top: -60px;
+    left: -30px;
+    width: calc(100% - -60px);
+    border: none;
+    background: #FAFAFA;
+    color: #222;
+
+    a.subbarlink, .subbarlink.gold, #srLeftContainer a {
+        color: #222 !important;
+    }
+    a.subbarlink.RESShortcutsCurrentSub {
+        color: #C1B764 !important;
+    }
+    .sr-bar .separator {
+        display: inline-block;
+        width: 1px;
+        color: transparent;
+    }
+
+    #RESShortcutsEditContainer {
+        margin: 0 5px 0 0;
+        background: none;
+    }
+    #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+        transform: scale(0.8);
+        background: none;
+        color: #222;
+    }
+    #RESShortcutsAdd {
+        margin-top: 1px;
+    }
+}
+
+// Floating never-ending reddit & inbox buttons
+#NREFloat {
+    right: 4px;
+
+    li {
+        float: none;
+    }
+}
